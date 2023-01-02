@@ -5,20 +5,22 @@ public class TrackCoach implements Coach {
 	private FortuneService fortuneService;
 	
 	public TrackCoach() {
+		System.out.println("TrackCoach: inside no-args constructor");
 	}
 	
 	public TrackCoach(FortuneService fortuneService) {
+		System.out.println("TrackCoach: inside constructor injection");
 		this.fortuneService = fortuneService;
 	}
 
 	@Override
 	public String getDailyWorkout() {
-		return "Run a hard 5k";
+		return "TrackCoach: Run a hard 5k";
 	}
 
 	@Override
 	public String getDailyFortune() {
-		return "Just Do It: " + fortuneService.getFortune();
+		return "TrackCoach: Just Do It: " + fortuneService.getFortune();
 	}
 	
 	
